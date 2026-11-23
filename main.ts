@@ -35,7 +35,7 @@ try {
   mkdirSync(OUTPUT_DIR, { recursive: true });
   copyFileSync(join(BOT_DIR, 'POST.json'), join(OUTPUT_DIR, 'POST.json'));
 
-  const memePath = join(BOT_DIR, 'meme', 'gta6-boarding-pass.png');
+  const memePath = join(BOT_DIR, 'meme', 'gta6-dmv-permit.png');
   let memeSize = -1;
   if (existsSync(memePath)) {
     memeSize = statSync(memePath).size;
@@ -47,7 +47,7 @@ try {
   console.error(`node: ${process.version}`);
   console.error(`BOT_DIR: ${BOT_DIR}`);
   console.error(`OUTPUT_DIR: ${OUTPUT_DIR}`);
-  console.error(`meme/gta6-boarding-pass.png size: ${memeSize} bytes`);
+  console.error(`meme/gta6-dmv-permit.png size: ${memeSize} bytes`);
   console.error(`POST.json sha256 (${OUTPUT_DIR}): ${sha256}`);
 
   console.log(`posted to ${url}`);
